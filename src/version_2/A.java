@@ -3,6 +3,7 @@ package version_2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by vlad on 13.09.16.
@@ -15,14 +16,15 @@ public class A implements CopyInterface<A> {
     //for checking Reflection
     public String name;
 
-    /*
+
     public A(int a, SomeTestEnum ste, List<String> someList, String name) {
+        Objects.requireNonNull(a);
         this.a = a;
         this.ste = ste;
         this.someList = someList;
         this.name = name;
     }
-    */
+
 
 
     @Override
@@ -57,8 +59,8 @@ public class A implements CopyInterface<A> {
 
     @Override
     public A copy() {
-        //A dup = new A(a,ste, someList, name);
-        A dup = new A();
+        A dup = new A(a,ste, someList, name);
+        //A dup = new A();
         dup.a = a;
         dup.ste = ste;
         //dup.someList = someList;

@@ -1,12 +1,7 @@
 package version_2;
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
-import version_2.A;
-import version_2.Generator;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,9 +30,9 @@ public class ATest {
         map.put("ste", new EnumValuesProvider<SomeTestEnum>(SomeTestEnum.values()));
         map.put("someList", new SimpleListValuesProvider<String>("aaa", "bbb", "ccc"));
 
-
-        //A a = new A(0, SomeTestEnum.FIRST, null, null);
-        A a = new A();
+        List list = new ArrayList<String>();
+        A a = new A(0, SomeTestEnum.FIRST, list, null);
+        //A a = new A();
         GlobalGenerator<A> generator = new GlobalGenerator<>(a, map, ti);
         generator.doTestAll();
     }
