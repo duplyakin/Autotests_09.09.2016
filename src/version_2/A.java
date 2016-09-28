@@ -1,6 +1,8 @@
 package version_2;
 
 
+import class_package.CopyInterface;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -27,32 +29,32 @@ public class A implements CopyInterface<A> {
 
 
 
-    @Override
+    //@Override
     public int getInt() {
         return a;
     }
 
-    @Override
+    //@Override
     public void setInt(int i) {
         a = i;
     }
 
-    @Override
+    //@Override
     public SomeTestEnum getSomeTestEnum() {
         return ste;
     }
 
-    @Override
+    //@Override
     public void setSomeTestEnum(SomeTestEnum enumValue) {
         ste = enumValue;
     }
 
-    @Override
+   // @Override
     public List<String> getSomeList() {
         return someList;
     }
 
-    @Override
+    //@Override
     public void setSomeList(List list) {
         someList = list;
     }

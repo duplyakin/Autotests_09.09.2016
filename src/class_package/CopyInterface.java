@@ -1,4 +1,4 @@
-package version_2;
+package class_package;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import java.util.List;
  */
 public interface CopyInterface<E> {
 
+    /*
     int getInt();
     void setInt(int i);
 
@@ -15,6 +16,7 @@ public interface CopyInterface<E> {
 
     List<String> getSomeList();
     void setSomeList(List<String> list);
+    */
 
     E copy();
 
